@@ -3,23 +3,23 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
-class AuthorCollection extends ResourceCollection
+class GenreResource extends JsonResource
 {
     /**
-     * Transform the resource collection into an array.
+     * Transform the resource into an array.
      *
-     * @return array<int|string, mixed>
+     * @return array<string, mixed>
      */
     public function toArray(Request $request): array
     {
         return [
-            'data' => $this->collection,
-            'meta' => [
-                'version' => '1.0.0',
-                'authors_count' => $this->collection->count(),
-            ]
+            'id' => $this->id,
+            'name' => $this->name,
+            'links' => [
+                'self' => route('genre.show', $this->id),
+            ],
         ];
     }
     public function withResponse($request, $response)

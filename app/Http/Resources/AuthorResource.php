@@ -28,6 +28,6 @@ class AuthorResource extends JsonResource
     public function withResponse($request, $response)
     {
         // Força o JSON a ter quebras de linha e barras não escapadas
-        $response->setEncodingOptions(JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+        $response->setEncodingOptions(JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     }
 }
