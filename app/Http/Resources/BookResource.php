@@ -26,4 +26,12 @@ class BookResource extends JsonResource
             ]
         ];
     }
+
+
+    public function withResponse($request, $response)
+    {
+        $response->setEncodingOptions(
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+        );
+    }
 }
