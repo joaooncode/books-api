@@ -26,7 +26,8 @@ class GenreController extends Controller
      */
     public function store(StoreGenreRequest $request)
     {
-        //
+        $genre = Genre::create($request->validated());
+        return new GenreResource($genre);
     }
 
     /**
@@ -42,7 +43,8 @@ class GenreController extends Controller
      */
     public function update(UpdateGenreRequest $request, Genre $genre)
     {
-        //
+        $genre->update($request->validated());
+        return new GenreResource($genre);
     }
 
     /**
@@ -50,6 +52,10 @@ class GenreController extends Controller
      */
     public function destroy(Genre $genre)
     {
-        //
+
+        $genre->delete();
+
+
+        return response()->noContent();
     }
 }
