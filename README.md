@@ -1,59 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 📚 Books API
 
-## About Laravel
+[![Laravel](https://img.shields.io/badge/Laravel-12.0-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Uma API RESTful robusta e moderna para gerenciar uma biblioteca digital de livros, autores e gêneros.**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[Funcionalidades](#-funcionalidades) • [Tech Stack](#-tech-stack) • [Instalação](#-instalação) • [Documentação da API](#-documentação-da-api) • [Contato](#-contato)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+</div>
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📖 Sobre o Projeto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Books API** é uma aplicação backend construída com **Laravel 12**, projetada para servir como a infraestrutura central para um sistema de gerenciamento de biblioteca ou uma livraria online. Ela fornece um conjunto abrangente de endpoints para gerenciar livros, seus autores e gêneros associados, garantindo a integridade dos dados e facilidade de uso.
 
-## Laravel Sponsors
+Este projeto demonstra práticas modernas de desenvolvimento backend, incluindo **design de API RESTful**, **migrations de banco de dados**, **gerenciamento de relacionamentos** e **documentação automatizada**.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ✨ Funcionalidades
 
-### Premium Partners
+-   **📚 Gerenciamento de Livros**: Criação, leitura, atualização e exclusão de registros de livros com suporte para ISBNs.
+-   **✍️ Gerenciamento de Autores**: Gerencie perfis de autores com recursos avançados como **Soft Deletes** para preservar o histórico de dados.
+-   **🏷️ Categorização de Gêneros**: Organize livros em gêneros para melhor descoberta.
+-   **🔍 Filtragem Avançada**: Recupere autores excluídos (soft-deleted) e restaure-os quando necessário.
+-   **🔐 Autenticação**: Endpoints de API seguros usando **Laravel Sanctum** (pronto para integração).
+-   **📄 Documentação Gerada Automaticamente**: Documentação da API ao vivo alimentada pelo **Scramble**, acessível em `/docs/api`.
+-   **🧪 Testes**: Inclui cobertura de testes usando **Pest PHP**.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠 Tech Stack
 
-## Contributing
+-   **Framework**: [Laravel 12](https://laravel.com)
+-   **Linguagem**: [PHP 8.2+](https://www.php.net)
+-   **Banco de Dados**: PostgreSQL
+-   **Documentação da API**: [Scramble](https://scramble.dedoc.co)
+-   **Testes**: [Pest](https://pestphp.com)
+-   **Containerização**: Docker (via Laravel Sail)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🚀 Instalação e Primeiros Passos
 
-## Code of Conduct
+Siga estes passos para configurar o projeto localmente.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Pré-requisitos
 
-## Security Vulnerabilities
+-   PHP 8.2 ou superior
+-   Composer
+-   PostgreSQL (ou Docker)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Passos
 
-## License
+1.  **Clone o repositório**
+    ```bash
+    git clone https://github.com/seu-usuario/books-api.git
+    cd books-api
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2.  **Instale as dependências**
+    ```bash
+    composer install
+    ```
+
+3.  **Configure o Ambiente**
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+    *Atualize o arquivo `.env` com as credenciais do seu banco de dados.*
+
+4.  **Execute Migrations e Seeders**
+    ```bash
+    php artisan migrate --seed
+    ```
+
+5.  **Inicie o Servidor**
+    ```bash
+    php artisan serve
+    ```
+
+A API estará disponível em `http://localhost:8000`.
+
+## 📑 Documentação da API
+
+Este projeto usa **Scramble** para gerar automaticamente a documentação da API.
+
+Assim que o servidor estiver rodando, visite:
+👉 **[http://localhost:8000/docs/api](http://localhost:8000/docs/api)**
+
+### Principais Endpoints
+
+| Método | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| `GET` | `/api/v1/books` | Listar todos os livros |
+| `GET` | `/api/v1/authors` | Listar todos os autores |
+| `GET` | `/api/v1/genre` | Listar todos os gêneros |
+| `GET` | `/api/v1/trashed` | Listar autores excluídos (soft-deleted) |
+| `PUT` | `/api/v1/restore/{author}` | Restaurar um autor excluído |
+
+## 🤝 Contato
+
+Criado por **[João Vitor R. da Silva](https://www.linkedin.com/in/joaovs/)** 
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/seu-perfil)
+[![GitHub](https://img.shields.io/badge/GitHub-Seguir-black?style=for-the-badge&logo=github)](https://github.com/joaooncode)
+
+---
+
+<div align="center">
+    <i>Se você achou este projeto útil, por favor dê uma ⭐️!</i>
+</div>
