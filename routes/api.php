@@ -10,4 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::prefix('v1')->group(base_path('routes/V1/books.php'));
 Route::prefix('v1')->group(base_path('routes/V1/authors.php'));
-Route::prefix('v1')->group(base_path('routes/V1/genere.php'));
+Route::prefix('v1')->group(base_path('routes/V1/genre.php'));

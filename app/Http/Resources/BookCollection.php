@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class AuthorCollection extends ResourceCollection
+class BookCollection extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -16,15 +16,17 @@ class AuthorCollection extends ResourceCollection
     {
         return [
             'data' => $this->collection,
-            'meta' => [
+            'meata' => [
                 'version' => '1.0.0',
-                'authors_count' => $this->collection->count(),
+                'books_count' => $this->collection->count()
             ]
         ];
     }
+
     public function withResponse($request, $response)
     {
-        // Força o JSON a ter quebras de linha e barras não escapadas
-        $response->setEncodingOptions(JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        $response->setEncodingOptions(
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+        );
     }
 }

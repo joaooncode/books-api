@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class AuthorCollection extends ResourceCollection
+class GenreCollection extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -16,10 +16,8 @@ class AuthorCollection extends ResourceCollection
     {
         return [
             'data' => $this->collection,
-            'meta' => [
-                'version' => '1.0.0',
-                'authors_count' => $this->collection->count(),
-            ]
+            'version' => '1.0.0',
+            'generes_count' => $this->collection->count(),
         ];
     }
     public function withResponse($request, $response)

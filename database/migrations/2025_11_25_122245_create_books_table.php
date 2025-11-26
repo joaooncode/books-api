@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('publish_year');
             $table->foreignId('author_id')->onDelete('cascade');
-            $table->foreignId('genere_id')->onDelete('cascade');
+            $table->foreignId('genre_id')->onDelete('cascade');
             $table->timestamps();
         });
     }
